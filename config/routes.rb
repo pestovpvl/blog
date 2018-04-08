@@ -1,8 +1,6 @@
 Rails.application.routes.draw do
-  get 'home/index'
 
-  root 'home#index'
-
+  devise_for :user
   get'terms' => 'pages#terms'
   get'about' => 'pages#about'
   resources :articles do
